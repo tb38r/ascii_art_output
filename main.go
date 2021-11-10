@@ -73,4 +73,17 @@ func main() {
 		}
 
 	}
+
+}
+func Newline(n string, y map[int][]string) string {
+	a := []string{}
+	// prints horizontally
+	for j := 0; j < len(y[32]); j++ {
+		for _, letter := range n {
+			a = append(a, y[int(letter)][j])
+		}
+		a = append(a, "\n")
+	}
+	b := strings.Join(a, "")
+	return b
 }
